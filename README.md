@@ -86,7 +86,7 @@ But to claim trust publicly—or use outputs in regulatory, legal, or customer-f
 | Tier | Price | Includes |
 |------|-------|----------|
 | **Free** | $0 | Fully functional engine, but unverifiable output. Cannot claim compliance. |
-| **Licensed** | $10,000/year | Verifiable output, cryptographic signatures, permission to use REXX seal, access to compliance templates. |
+| **Licensed** | $12,500/year | Verifiable output, cryptographic signatures, permission to use REXX seal, access to compliance templates. |
 | **Enterprise** | $20,000/year | Includes system integration support, SIEM feed output, branded licence ID, and private schema extensions. |
 
 **Reminder:**  
