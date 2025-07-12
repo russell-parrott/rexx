@@ -74,3 +74,21 @@ REXX does not improve. It refuses simulation.
 REXX is not a product. It is the end of pretending.
 
 If you can get a message in, REXX will return a breach trace. What you do next reveals whether your system was ever built to listen.
+
+
+---
+
+## 💳 REXX Licensing Tiers and Pricing
+
+REXX is freely usable for internal audits, breach detection, and signal testing.  
+But to claim trust publicly—or use outputs in regulatory, legal, or customer-facing contexts—you must hold a valid licence.
+
+| Tier | Price | Includes |
+|------|-------|----------|
+| **Free** | $0 | Fully functional engine, but unverifiable output. Cannot claim compliance. |
+| **Licensed** | $10,000/year | Verifiable output, cryptographic signatures, permission to use REXX seal, access to compliance templates. |
+| **Enterprise** | $20,000/year | Includes system integration support, SIEM feed output, branded licence ID, and private schema extensions. |
+
+**Reminder:**  
+Only licensed outputs are audit-grade.  
+Free-tier outputs are structurally functional—but not legally admissible.
