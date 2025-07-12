@@ -49,7 +49,7 @@ The free tier lets you run the logic. It does not let you claim compliance.
 
 ---
 
-### Licensed Tier — $10,000/year  
+### Licensed Tier - Standard License
 **Verifiable, enforceable, audit-grade output**
 
 ```json
@@ -78,7 +78,7 @@ Only licensed outputs carry legal weight or survive regulatory inspection.
 
 ---
 
-### Enterprise Tier — $20,000/year  
+### Licensed Tier - Enterprise License  
 **Custom traceability and system integration**
 
 Includes everything in the Licensed Tier, plus:
@@ -100,4 +100,5 @@ All licensed outputs include:
 Free tier outputs are detectable and will fail verification.
 
 **Verification URL:**  
-`https://russell-parrott/rexx/verify/[session_fingerprint]`
+`https://github.com/russell-parrott/rexx/verify/[session_fingerprint]`
+
