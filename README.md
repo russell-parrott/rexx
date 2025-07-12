@@ -34,13 +34,25 @@ Anyone may run the logic, interpret signals, and apply the enforcement model.
 **But only licensed systems may:**
 
 - Attach the REXX Compliance Seal  
-- Output cryptographically signed session fingerprints  
+- Output cryptographically verifiable fingerprints  
 - Use REXX for legal, regulatory, or customer-facing claims  
 - Declare structural compliance  
 
 **No licence = no audit integrity.**
 
 This repo provides functional access, not trust permission.
+
+---
+
+## 🔍 Verification Policy
+
+Not all REXX sessions are listed publicly.
+
+Only those used in regulatory, legal, or public trust contexts appear in `/verify/`.  
+All other sessions remain internally traceable and cryptographically verifiable without exposure.
+
+For full policy and tamper-resistance rules, see:  
+👉 [`VERIFICATION_POLICY.md`](./VERIFICATION_POLICY.md)
 
 ---
 
@@ -62,4 +74,3 @@ REXX does not improve. It refuses simulation.
 REXX is not a product. It is the end of pretending.
 
 If you can get a message in, REXX will return a breach trace. What you do next reveals whether your system was ever built to listen.
-
