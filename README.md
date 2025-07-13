@@ -25,10 +25,6 @@ This repository contains the operational implementation of **REXX v1.0**. It inc
 REXX runs on any LLM that can obey strict schema rules. It does not allow improvisation, hallucination, or reinterpretation. Any system that deviates from the REXX protocol forfeits traceability.
 
  ---
- 
-# REXX – Structural Wiki
-
----
 
 ## 📘 Core Doctrine
 
