@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The REXX Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2em; max-width: 800px; margin: auto; }
+    h1 { font-size: 1.8em; }
+    label {align-items:center; display: flex; gap:1rem;margin: 1em 0; }
+	input[type="checkbox"]{ width:1.5rem;height:1.5rem;}
+    button { background-color: #006064; color: white; border: none; cursor: pointer;  margin-top: 2em; padding: 1em 1.5em;text-transform:uppercase;font-weight:600; }
+    #results { margin-top: 2em; border-top: 1px solid #ccc; padding-top: 1.5em; }
+    .breach { margin-bottom: 1em; }
+	.results{padding:0.5rem 1.5rem;background:#F1f1f1}
+  </style>
+</head>
+<body>
+  <h1>The REXX Test: 12 Questions to tell if your Customer Service Platform erases emotion</h1>
+  This 12-question diagnostic reveals whether your Customer Service Platform suppresses frustration, blocks escalation, disables exit, or treats silence as consent.<p/>Each "yes" exposes a structural breach - not a feeling. Run the test. Count the breaches. Trace the harm.
+  <p/>
+  <form id="rexxTest">
+	<small>Tick for yes</small>
+	<br/>
+    <label><input type="checkbox" name="q1"> Can a customer issue be marked “fixed” even if the problem isn’t actually solved?</label>
+    <label><input type="checkbox" name="q2"> Do customers have to explain the same problem more than once?</label>
+    <label><input type="checkbox" name="q3"> Are staff praised more for being fast than for fixing things properly?</label>
+    <label><input type="checkbox" name="q4"> Is it hard for customers to reach a real person who can actually help?</label>
+    <label><input type="checkbox" name="q5"> If a customer asks to speak to someone else, is that delayed or discouraged?</label>
+    <label><input type="checkbox" name="q6"> If someone comes back with the same issue, is it treated like a brand-new case?</label>
+    <label><input type="checkbox" name="q7"> Is cancelling, pausing, or leaving made hard to find or confusing on purpose?</label>
+    <label><input type="checkbox" name="q8"> Are people kept through automatic renewals without being clearly asked first?</label>
+    <label><input type="checkbox" name="q9"> Are customers who get angry treated as rude instead of being taken seriously?</label>
+    <label><input type="checkbox" name="q10"> Do upset customers get calming messages instead of real action?</label>
+    <label><input type="checkbox" name="q11"> If someone stops replying, do you count that as “resolved”?</label>
+    <label><input type="checkbox" name="q12"> Do you collect feedback but rarely show what changed because of it?</label>
+    <button type="button" onclick="evaluateTest()">Submit</button>
+  </form>
+
+  <div id="results"></div>
+
+  <script>
+    const breaches = [
+      {
+        q: 1,
+        signal: "Frustration",
+        issue: "Resolution claimed without repair",
+        law: "Violates UK CRA 2015 / EU UCPD"
+      },
+      {
+        q: 2,
+        signal: "Frustration",
+        issue: "System not listening",
+        law: "ADA / UK Equality Act / UN CRPD"
+      },
+      {
+        q: 3,
+        signal: "Frustration",
+        issue: "Speed rewarded over accuracy",
+        law: "FCA TCF principles"
+      },
+      {
+        q: 4,
+        signal: "Escalation",
+        issue: "Human access obstructed",
+        law: "EU DSA / US FCC standards"
+      },
+      {
+        q: 5,
+        signal: "Escalation",
+        issue: "Escalation blocked or penalised",
+        law: "ISO 10002 / EU Consumer ADR"
+      },
+      {
+        q: 6,
+        signal: "Escalation",
+        issue: "Repeat problems not traced",
+        law: "GDPR Art. 5(1)(d), Art. 7(1)"
+      },
+      {
+        q: 7,
+        signal: "Hesitation",
+        issue: "Exit suppressed or hidden",
+        law: "CPRA + FTC Click-to-Cancel"
+      },
+      {
+        q: 8,
+        signal: "Hesitation",
+        issue: "Consent replaced with default capture",
+        law: "EU Consumer Rights / US Auto-Renewal Laws"
+      },
+      {
+        q: 9,
+        signal: "Anger",
+        issue: "Blunt feedback dismissed as rudeness",
+        law: "EEOC / UK Equality Act"
+      },
+      {
+        q: 10,
+        signal: "Anger",
+        issue: "Emotion defused, not resolved",
+        law: "GDPR fairness principles"
+      },
+      {
+        q: 11,
+        signal: "Silence",
+        issue: "Withdrawal treated as success",
+        law: "CPRA / GDPR — silence ≠ consent"
+      },
+      {
+        q: 12,
+        signal: "Silence",
+        issue: "Feedback absorbed without consequence",
+        law: "ISO 10002:2018"
+      }
+    ];
+
+    function evaluateTest() {
+      const form = document.getElementById("rexxTest");
+      const results = document.getElementById("results");
+      results.innerHTML = "";
+      let breachesFound = 0;
+      let output = "<h2>REXX Test Results</h2>";
+      breaches.forEach(breach => {
+        if (form["q" + breach.q].checked) {
+          breachesFound++;
+          output += `<div class="breach"><strong>Q${breach.q}</strong>: <em>${breach.signal}</em> - ${breach.issue}<br/><small>Potential violation: ${breach.law}</small></div>`;
+        }
+      });
+      output += `<p><strong>Total Breaches: ${breachesFound} / 12</strong></p>`;
+      if (breachesFound >= 9) {
+        output += `<div class="results"><p style="color:darkred;"><strong>Conclusion:</strong> Structural emotional erasure is embedded. The system is not safe.</p></div>`;
+      } else if (breachesFound >= 5) {
+        output += `<div class="results"><p style="color:orangered;"><strong>Conclusion:</strong> Breach patterns are active. Traceability is compromised.</p></div>`;
+      } else if (breachesFound > 0) {
+        output += `<div class="results"><p style="color:orange;"><strong>Conclusion:</strong> Warning signs present. Suppression logic may be forming.</p></div>`;
+      } else {
+        output += `<div class="results"><p style="color:green;"><strong>Conclusion:</strong> No major breach indicators found. Continue monthly audits.</p></div>`;
+      }
+      results.innerHTML = output;
+    }
+  </script>
+</body>
+</html>
