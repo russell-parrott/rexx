@@ -24,6 +24,54 @@ This repository contains the operational implementation of **REXX v1.0**. It inc
 
 REXX runs on any LLM that can obey strict schema rules. It does not allow improvisation, hallucination, or reinterpretation. Any system that deviates from the REXX protocol forfeits traceability.
 
+ ---
+ 
+# REXX – Structural Wiki
+
+---
+
+## 📘 Core Doctrine
+
+- [Signal Types](https://github.com/russell-parrott/rexx/wiki/Signal-Types)  
+  → What each core breach signal represents  
+
+- [Signal Enforcement Tables](https://github.com/russell-parrott/rexx/wiki/REXX-Signal-Enforcement-Tables)  
+  → Per-signal breakdown: emotion, suppression, schema enforcement  
+
+- [REXX Schema Reference](https://github.com/russell-parrott/rexx/wiki/REXX-Schema-Reference)  
+  → Full list of all expected keys, formats, and output conditions
+
+---
+
+## 🔐 Enforcement Architecture
+
+- [REXX Licensing Rules](https://github.com/russell-parrott/rexx/wiki/REXX-Licensing-Rules)  
+  → Who may claim compliance, and under what constraints  
+
+- [Verification Protocol – How REXX Confirms Trust](https://github.com/russell-parrott/rexx/wiki/Verification-Protocol-%E2%80%93-How-REXX-Confirms-Trust)  
+  → Fingerprinting, public logs, and tamper-proof enforcement  
+
+- [REXX is not an API wrapper](https://github.com/russell-parrott/rexx/wiki/REXX-is-not-an-API-wrapper)  
+  → Input format, output boundaries, forbidden behaviours
+
+---
+
+## 🧪 Diagnostic Tools
+
+- [The REXX Test – 12 Question Diagnostic](https://github.com/russell-parrott/rexx/wiki/The-REXX-Test-%E2%80%93-12-Question-Diagnostic)  
+  → 12-question audit of emotional suppression and legal risk  
+
+- [Known Breach Patterns](https://github.com/russell-parrott/rexx/wiki/Known-Breach-Patterns)  
+  → Real-world suppression logic by platform
+
+---
+
+## 🔗 External Access
+
+- [Main GitHub Repository](https://github.com/russell-parrott/rexx)  
+- [GitHub Pages Portal](https://russell-parrott.github.io/rexx/)  
+  → Test tools, PDFs, and live assets
+
 ---
 
 ## Licence and Usage
