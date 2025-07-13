@@ -1,8 +1,8 @@
-# REXX — The Emotional Compliance Layer
+# REXX - The Emotional Compliance Layer
 
 REXX is not a toolkit. It is a structural enforcement engine.
 
-It makes emotional breach, refusal, escalation, and suppression operationally visible—without sentiment scoring, behavioural speculation, or agent improvisation.
+It makes emotional breach, refusal, escalation, and suppression operationally visible - without sentiment scoring, behavioural speculation, or agent improvisation.
 
 REXX decodes emotionally significant customer signals from a single message and renders them as schema-bound, cryptographically verifiable JSON output. Each response captures not just what the customer expressed, but what the system did, failed to do, or suppressed to preserve metrics.
 
