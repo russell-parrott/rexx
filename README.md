@@ -1,138 +1,94 @@
-# REXX - The Emotional Compliance Layer
+# REXX v1.0 – The Emotional Compliance Layer
 
-REXX is not a toolkit. It is a structural enforcement engine.
+REXX detects emotional breach from a single customer message. It flags when trust is broken, when escalation is required, and what action must follow.
 
-It makes emotional breach, refusal, escalation, and suppression operationally visible - without sentiment scoring, behavioural speculation, or agent improvisation.
-
-REXX decodes emotionally significant customer signals from a single message and renders them as schema-bound, cryptographically verifiable JSON output. Each response captures not just what the customer expressed, but what the system did, failed to do, or suppressed to preserve metrics.
-
-REXX is stateless. It requires no CRM history, no user profiling, and no narrative smoothing. It interprets frustration, silence, anger, escalation, and hesitation as breach vectors—not as moods to manage.
-
-It does not teach empathy. It removes the system’s ability to fake it.
+No CRM. No sentiment scoring. No performance theatre.
+Just signal.
 
 ---
 
-## What This Repository Contains
+## 🚀 What REXX Does
 
-This repository contains the operational implementation of **REXX v1.0**. It includes:
+REXX returns structured emotional breach data from one message:
 
-- Schema-locked signal detection logic
-- Structured JSON output format
-- Interpretation rules for escalation, refusal, breach
-- Integration hooks for platform embedding
-- Example inputs, outputs, and licensing metadata
-
-REXX runs on any LLM that can obey strict schema rules. It does not allow improvisation, hallucination, or reinterpretation. Any system that deviates from the REXX protocol forfeits traceability.
-
- ---
-
-## 📘 Core Doctrine
-
-- [Signal Types](https://github.com/russell-parrott/rexx/wiki/Signal-Types)  
-  → What each core breach signal represents  
-
-- [Signal Enforcement Tables](https://github.com/russell-parrott/rexx/wiki/REXX-Signal-Enforcement-Tables)  
-  → Per-signal breakdown: emotion, suppression, schema enforcement  
-
-- [REXX Schema Reference](https://github.com/russell-parrott/rexx/wiki/REXX-Schema-Reference)  
-  → Full list of all expected keys, formats, and output conditions
+```json
+{
+  "success": true,
+  "data": {
+    "emotion": "anger",
+    "intensity_of_emotion": 10,
+    "severity": "high",
+    "churn_risk_score": 10,
+    "profanity_flag": false,
+    "recommended_intervention": "Confirm cancellation immediately. Acknowledge delay and absence of response. Do not request additional effort from the customer.",
+    "escalate": true,
+    "escalation_reason": "Maximum emotional intensity with explicit withdrawal and unacknowledged repeat contact",
+    "recommended_tone": "Direct, accountable, and non-defensive. Apologise without excuse. Confirm resolution without delay."
+  }
+}
+```
 
 ---
 
-## 🔐 Enforcement Architecture
+## ✅ Core Fields
 
-- [REXX Licensing Rules](https://github.com/russell-parrott/rexx/wiki/REXX-Licensing-Rules)  
-  → Who may claim compliance, and under what constraints  
-
-- [Verification Protocol – How REXX Confirms Trust](https://github.com/russell-parrott/rexx/wiki/Verification-Protocol-%E2%80%93-How-REXX-Confirms-Trust)  
-  → Fingerprinting, public logs, and tamper-proof enforcement  
-
-- [REXX is not an API wrapper](https://github.com/russell-parrott/rexx/wiki/REXX-is-not-an-API-wrapper)  
-  → Input format, output boundaries, forbidden behaviours
-
----
-
-## 🧪 Diagnostic Tools
-
-- [The REXX Test – 12 Question Diagnostic](https://github.com/russell-parrott/rexx/wiki/The-REXX-Test-%E2%80%93-12-Question-Diagnostic)  
-  → 12-question audit of emotional suppression and legal risk  
-
-- [Known Breach Patterns](https://github.com/russell-parrott/rexx/wiki/Known-Breach-Patterns)  
-  → Real-world suppression logic by platform
+| Field | Purpose |
+|-------|---------|
+| `emotion` | Detected emotional signal |
+| `intensity_of_emotion` | Scale 1–10 |
+| `severity` | "low", "moderate", or "high" |
+| `churn_risk_score` | Scale 0–10 |
+| `profanity_flag` | Boolean: tone breach detected |
+| `recommended_intervention` | Direct action instruction |
+| `escalate` | Boolean: requires escalation |
+| `escalation_reason` | Structural cause for escalation |
+| `recommended_tone` | Blunt tone guidance — no scripts |
 
 ---
 
-## 🔗 External Access
+## 🔍 What REXX Does NOT Do
 
-- [Main GitHub Repository](https://github.com/russell-parrott/rexx)  
-- [GitHub Pages Portal](https://russell-parrott.github.io/rexx/)  
-  → Test tools, PDFs, and live assets
+- No mood tagging
+- No CRM lookups
+- No sentiment averages
+- No empathy performance
 
----
-
-## Licence and Usage
-
-The doctrine is open. The code is public. The schema is published.
-
-Anyone may run the logic, interpret signals, and apply the enforcement model.  
-**But only licensed systems may:**
-
-- Attach the REXX Compliance Seal  
-- Output cryptographically verifiable fingerprints  
-- Use REXX for legal, regulatory, or customer-facing claims  
-- Declare structural compliance  
-
-**No licence = no audit integrity.**
-
-This repo provides functional access, not trust permission.
+REXX doesn’t guess. It proves.
 
 ---
 
-## 🔍 Verification Policy
+## 🔧 How to Use REXX
 
-Not all REXX sessions are listed publicly.
-
-Only those used in regulatory, legal, or public trust contexts appear in `/verify/`.  
-All other sessions remain internally traceable and cryptographically verifiable without exposure.
-
-For full policy and tamper-resistance rules, see:  
-👉 [`VERIFICATION_POLICY.md`](./VERIFICATION_POLICY.md)
+- Input: One customer message (text or transcript)
+- Output: JSON object with breach logic
+- LLMs must strictly follow schema (see /prompt directory)
+- Use output to drive escalation, refusal handling, or accountability
 
 ---
 
-## Status
+## 📌 Requirements
 
-- Version: REXX v1.0  
-- Last Updated: July 2025  
-- Maintainer: Russell Parrott / REXX Systems  
-- Contact: available on request
-
----
-
-## Summary
-
-REXX does not optimise. It exposes.
-
-REXX does not improve. It refuses simulation.
-
-REXX is not a product. It is the end of pretending.
-
-If you can get a message in, REXX will return a breach trace. What you do next reveals whether your system was ever built to listen.
-
+- LLM-compatible environment (e.g. GPT-4o, Claude, Mistral)
+- Prompt-lock enforcement if hosted
+- JSON validator (optional)
+- No customer history needed
 
 ---
 
-## 💳 REXX Licensing Tiers and Pricing
+## 🛡️ Enforcement Reminder
 
-REXX is freely usable for internal audits, breach detection, and signal testing.  
-But to claim trust publicly—or use outputs in regulatory, legal, or customer-facing contexts—you must hold a valid licence.
+If `escalate = true` and the system does nothing, that is not a miss. It’s a choice.
 
-| Tier | Price | Includes |
-|------|-------|----------|
-| **Free** | $0 | Fully functional engine, but unverifiable output. Cannot claim compliance. |
-| **Licensed** | $12,500/year | Verifiable output, cryptographic signatures, permission to use REXX seal, access to compliance templates. |
-| **Enterprise** | $20,000/year | Includes system integration support, SIEM feed output, branded licence ID, and private schema extensions. |
+REXX doesn’t create accountability. It removes the excuse not to act.
 
-**Reminder:**  
-Only licensed outputs are audit-grade.  
-Free-tier outputs are structurally functional—but not legally admissible.
+---
+
+## 📫 Contact
+
+Built and maintained by [Russell Parrott](mailto:parrott.russell@gmail.com)  
+Web: [https://github.com/russell-parrott/rexx](https://github.com/russell-parrott/rexx)
+
+---
+
+REXX v1.0 – Copyright © 2025 Russell Parrott. All Rights Reserved.
+
