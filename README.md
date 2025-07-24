@@ -75,6 +75,7 @@ REXX doesn’t guess. It proves.
 
 ---
 REXX v1.0 — Structural Fidelity Across LLMs
+
 REXX is a prompt-based tool you can run it on any LLM that accepts text input and returns structured output but not all models behave the same — yet.
 
 To help individuals use REXX without needing technical fixes, we define two categories:
