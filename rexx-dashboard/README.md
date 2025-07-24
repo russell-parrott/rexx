@@ -55,17 +55,21 @@ console.log(JSON.stringify(report, null, 2));
     "exits_unconfirmed": 22,
     "repeat_harms_flagged": 18
   },
-  "action_summary": [
-    {
-      "pattern": "Policy-cited refusal with no override path",
-      "teams": ["Legal"],
-      "trigger_count": 14,
-      "triggering_cases": ["acc_0032", "acc_0045", "..."],
-      "note": "policy-based denials exceed threshold",
-      "severity": "high",
-      "priority": 1
-    }
-  ]
+ "action_summary": [
+  {
+    "pattern": "Policy-cited refusal with no override path",
+    "teams": ["Legal"],
+    "trigger_count": 14,
+    "triggering_cases": ["acc_0032", "acc_0045", "..."],
+    "note": "policy-based denials exceed threshold",
+    "severity": "high",
+    "priority": 1,
+    "regulatory_risks": [
+      "GDPR Art. 22: Automated decisions without review",
+      "Consumer rights risk: Refusal without override path"
+    ]
+  }
+]
 }
 ```
 
