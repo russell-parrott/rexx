@@ -14,16 +14,17 @@ REXX returns structured emotional breach data from one message:
 ```json
 {
   "success": true,
-  "data": {
-    "emotion": "anger",
-    "intensity_of_emotion": 10,
+    "data": {
+     "emotion": "frustration",
+    "intensity_of_emotion": 9,
     "severity": "high",
-    "churn_risk_score": 10,
+    "churn_risk_score": 8,
     "profanity_flag": false,
-    "recommended_intervention": "Confirm cancellation immediately. Acknowledge delay and absence of response. Do not request additional effort from the customer.",
+    "recommended_intervention": "Acknowledge the broken promise and offer concrete recovery options.",
     "escalate": true,
-    "escalation_reason": "Maximum emotional intensity with explicit withdrawal and unacknowledged repeat contact",
-    "recommended_tone": "Direct, accountable, and non-defensive. Apologise without excuse. Confirm resolution without delay."
+    "escalation_reason": "High emotional severity and trust breach",
+    "recommended_tone": "Own the failure, do not deflect. Offer direct recovery and rebuild trust.",
+    "behavioural_mode_name": "Betrayal Spike"
   }
 }
 ```
