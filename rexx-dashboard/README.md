@@ -1,7 +1,7 @@
 # 🛠 REXX Reporting Toolkit  
 **Optional Add-on for Breach Reporting**
 
-This file (`rexx-dashboard.js`) is an **optional logic module** for teams using REXX. It transforms saved REXX outputs into structured, Playbook-aligned **trust breach reports**—filtered by time period, routed by pattern, and prioritised by severity.
+This file (`dashboard.js`) is an **optional logic module** for teams using REXX. It transforms saved REXX outputs into structured, Playbook-aligned **trust breach reports**—filtered by time period, routed by pattern, and prioritised by severity.
 
 This module does not store, style, or visualise data. It exists solely to support traceable reporting.
 
