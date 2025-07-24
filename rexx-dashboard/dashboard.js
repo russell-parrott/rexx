@@ -14,6 +14,25 @@
  * REXX is free and open source. This reporting toolkit can be downloaded from the REXX repository if needed.
  */
 
+const regulatoryRiskMap = {
+  "Policy-cited refusal with no override path": [
+    "GDPR Art. 22: Automated decisions without review",
+    "Consumer rights risk: Refusal without override path"
+  ],
+  "Escalation requests suppressed by automation": [
+    "EU AI Act Art. 14: Lack of human oversight",
+    "FTC unfairness: Obstructed access to redress"
+  ],
+  "Silent exits following refund denial": [
+    "GDPR Art. 5(1)(d): Misclassified satisfaction (data accuracy)",
+    "FTC deception risk: Silence counted as resolution"
+  ],
+  "Subscription cancellation misclassified as user error": [
+    "GDPR Art. 5(1)(c): Data minimisation failure",
+    "EU AI Act: Harmful misclassification of intent",
+    "FTC pattern suppression: Repeat denial of autonomy"
+  ]
+};
 
 function generateTrustBreachReport(rexxRecords, options = {}) {
   const {
@@ -129,14 +148,15 @@ function generateTrustBreachReport(rexxRecords, options = {}) {
       });
 
       report.action_summary.push({
-        pattern,
-        teams: match.teams,
-        trigger_count: report.repeat_harm_patterns[pattern],
-        triggering_cases: triggeringCases.map(r => r.account_id || r.sessionID || "unknown"),
-        note: match.note,
-        severity: report.repeat_harm_patterns[pattern] >= 10 ? "high" : report.repeat_harm_patterns[pattern] >= 5 ? "medium" : "low",
-        priority: report.repeat_harm_patterns[pattern] >= 10 ? 1 : report.repeat_harm_patterns[pattern] >= 5 ? 2 : 3
-      });
+		  pattern,
+		  teams: match.teams,
+		  trigger_count: report.repeat_harm_patterns[pattern],
+		  triggering_cases: triggeringCases.map(r => r.account_id || r.sessionID || "unknown"),
+		  note: match.note,
+		  severity: report.repeat_harm_patterns[pattern] >= 10 ? "high" : report.repeat_harm_patterns[pattern] >= 5 ? "medium" : "low",
+		  priority: report.repeat_harm_patterns[pattern] >= 10 ? 1 : report.repeat_harm_patterns[pattern] >= 5 ? 2 : 3,
+		  regulatory_risks: regulatoryRiskMap[pattern] || []
+		});
     }
   }
 
@@ -157,8 +177,7 @@ function generateTrustBreachReport(rexxRecords, options = {}) {
   if (report.traceability_metrics.repeat_harms_flagged > 3) {
     report.action_summary.push("2 breach clusters remain unacknowledged (Product)");
   }
-
-    // Auto-sort action summary by priority (ascending)
+  
   report.action_summary.sort((a, b) => a.priority - b.priority);
 
   return report;
