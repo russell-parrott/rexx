@@ -71,8 +71,9 @@ console.log(JSON.stringify(report, null, 2));
   }
 ]
 }
-```
 
+```
+Regulatory risk annotations are provided for reference only. They help map structural breach patterns to possible compliance exposure under frameworks such as GDPR, FTC guidance, or the EU AI Act. These are not legal conclusions, but operational signals of unresolved risk.
 ---
 
 ## 🔒 This Is Not
