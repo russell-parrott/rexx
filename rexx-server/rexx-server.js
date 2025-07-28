@@ -7,16 +7,17 @@ const app = express();
 app.use(bodyParser.json());
 
 app.post("/chat", async (req, res) => {
-  const { review, sessionID, type, provider } = req.body;
+  const { review, sessionID, client_id, type, provider } = req.body;
 
   if (!sessionID) {
     return res.status(400).json({ success: false, error: "Missing sessionID" });
   }
 
   try {
-    const output = await routeLLM({ review, type, provider });
-    
-	
+    	const output = await routeLLM({ review, type, provider });
+    	output.timestamp = new Date();
+    	output.sessionID = sessionID;
+    	output.client_id = client_id	
 	return res.status(200).json({ success: true, data: output });
   } catch (err) {
     console.error("REXX error:", err);
