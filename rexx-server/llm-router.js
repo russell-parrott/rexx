@@ -51,18 +51,18 @@ async function routeLLM({ review, type, provider }) {
   result.escalate === true &&
   result.severity === "high"
 ) {
-  compliance_relevant = true;
+  result.compliance_relevant = true;
 } else if (
   ["Betrayal Spike", "Broken Promise"].includes(result.behavioural_mode) &&
   result.intensity_of_emotion >= 8
 ) {
-  compliance_relevant = true;
+  result.compliance_relevant = true;
 } else if (
   result.recommended_intervention.toLowerCase().startsWith("own the failure")
 ) {
-  compliance_relevant = true;
+  result.compliance_relevant = true;
 } else {
-  compliance_relevant = false;
+   result.compliance_relevant = false;
 }
 
 	const modeName = result.behavioural_mode_name;
