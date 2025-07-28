@@ -16,7 +16,7 @@ app.post("/chat", async (req, res) => {
   try {
     	const output = await routeLLM({ review, type, provider });
     	output.timestamp = new Date();
-    	output.sessionID = sessionID;
+    	output.session_id = sessionID;
     	output.client_id = client_id	
 	return res.status(200).json({ success: true, data: output });
   } catch (err) {
