@@ -45,7 +45,7 @@ The server will run on `http://localhost:3000` by default.
 {
   "review": "I’m still waiting. Cancel the account now.",
   "session_id": "abc123",
-  "client_id":"abd=123-123",
+  "client_id":"abd-123-123",
   "type": "text",
   "provider": "openai"
 }
