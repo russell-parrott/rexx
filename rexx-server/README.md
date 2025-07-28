@@ -44,7 +44,8 @@ The server will run on `http://localhost:3000` by default.
 ```json
 {
   "review": "I’m still waiting. Cancel the account now.",
-  "sessionID": "abc123",
+  "session_id": "abc123",
+  "client_id":"abd=123-123",
   "type": "text",
   "provider": "openai"
 }
