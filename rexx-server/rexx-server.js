@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.post("/chat", async (req, res) => {
-  const { review, sessionID, client_id, type, provider } = req.body;
+  const { review, session_id, client_id, type, provider } = req.body;
 
   if (!sessionID) {
     return res.status(400).json({ success: false, error: "Missing sessionID" });
