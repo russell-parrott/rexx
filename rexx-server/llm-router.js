@@ -43,10 +43,28 @@ async function routeLLM({ review, type, provider }) {
 	}
 	
 	if ( result.intensity_of_emotion >= 8 || result.behavioural_mode_name === "Betrayal Spike"){
-		parsed.escalate = true;
-		parsed.escalation_reason = "High emotional severity and trust breach";
+		result.escalate = true;
+		result.escalation_reason = "High emotional severity and trust breach";
 	}
-		
+
+	if (
+  result.escalate === true &&
+  result.severity === "high"
+) {
+  compliance_relevant = true;
+} else if (
+  ["Betrayal Spike", "Broken Promise"].includes(result.behavioural_mode) &&
+  result.intensity_of_emotion >= 8
+) {
+  compliance_relevant = true;
+} else if (
+  result.recommended_intervention.toLowerCase().startsWith("own the failure")
+) {
+  compliance_relevant = true;
+} else {
+  compliance_relevant = false;
+}
+
 	const modeName = result.behavioural_mode_name;
 	const modeInfo = behaviouralModeMap[modeName];
 	if (modeInfo) {
